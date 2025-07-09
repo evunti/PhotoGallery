@@ -6,9 +6,8 @@ export function PhotoGrid({ photos }: { photos: any[] }) {
     <div
       style={{
         display: "grid",
-        gridTemplate: "repeat(600, 3fr)",
-        gap: "0.2rem",
-        width: "100%",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gap: "2px",
         maxWidth: 1000,
         justifyItems: "center",
       }}
@@ -18,15 +17,13 @@ export function PhotoGrid({ photos }: { photos: any[] }) {
         return (
           <Image
             key={idx}
-            src={urlFor(photo).width(400).height(400).fit("crop").url()}
+            src={urlFor(photo).width(800).height(800).fit("crop").dpr(2).url()}
             alt={photo.alt || "Photo"}
             width={400}
             height={400}
             style={{
               borderRadius: 0,
               objectFit: "cover",
-              width: 140,
-              height: 140,
               background: "#f4f4f5",
               boxShadow: "none",
               display: "block",
