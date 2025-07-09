@@ -2,6 +2,7 @@
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
+import { PhotoGrid } from "@/components/PhotoGrid";
 import Link from "next/link";
 
 // GROQ query to get all albums and their photos
@@ -51,10 +52,7 @@ export default async function GalleryPage() {
               style={{
                 textDecoration: "none",
                 color: "inherit",
-                background: "#fff",
-                borderRadius: 16,
-                boxShadow: "0 2px 12px #0002",
-                padding: "1.5rem",
+
                 minWidth: 260,
                 maxWidth: 320,
                 aspectRatio: "1 / 1.1",
@@ -69,9 +67,10 @@ export default async function GalleryPage() {
               {coverPhoto && (
                 <Image
                   src={urlFor(coverPhoto)
-                    .width(500)
-                    .height(500)
+                    .width(800)
+                    .height(800)
                     .fit("crop")
+                    .dpr(2)
                     .url()}
                   alt={coverPhoto.alt || album.title}
                   width={800}
