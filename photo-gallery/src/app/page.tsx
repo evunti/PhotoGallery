@@ -69,22 +69,13 @@ export default async function GalleryPage() {
               {coverPhoto && (
                 <Image
                   src={urlFor(coverPhoto)
-                    .width(400)
-                    .height(400)
+                    .width(500)
+                    .height(500)
                     .fit("crop")
                     .url()}
                   alt={coverPhoto.alt || album.title}
-                  width={400}
+                  width={800}
                   height={400}
-                  style={{
-                    borderRadius: 12,
-                    objectFit: "cover",
-                    width: "100%",
-                    height: 200,
-                    background: "#eee",
-                    marginBottom: 16,
-                    aspectRatio: "1 / 1",
-                  }}
                 />
               )}
               <h2

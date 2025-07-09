@@ -63,10 +63,10 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          gap: "1.5rem",
+          gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+          gap: "0.2rem",
           width: "100%",
-          maxWidth: 1200,
+          maxWidth: 1000,
           justifyItems: "center",
         }}
       >
@@ -75,21 +75,20 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
           return (
             <Image
               key={idx}
-              src={urlFor(photo).width(600).height(600).fit("crop").url()}
+              src={urlFor(photo).width(400).height(400).fit("crop").url()}
               alt={photo.alt || "Photo"}
-              width={600}
-              height={600}
+              width={400}
+              height={400}
               style={{
-                borderRadius: 16,
+                borderRadius: 0,
                 objectFit: "cover",
-                width: 320,
-                maxWidth: "100%",
-                aspectRatio: "1 / 1",
+                width: 140,
+                height: 140,
                 background: "#f4f4f5",
-                boxShadow: "0 2px 12px #0001",
+                boxShadow: "none",
                 transition: "box-shadow 0.2s",
                 display: "block",
-                margin: "0 auto",
+                margin: "0",
               }}
             />
           );
