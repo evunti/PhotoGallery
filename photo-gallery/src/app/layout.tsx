@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "@/app/globals.css";
 
 export default function RootLayout({
@@ -19,7 +20,7 @@ export default function RootLayout({
             padding: "1.5rem 2rem 0 2rem",
           }}
         >
-          <a
+          <Link
             href="/"
             style={{
               color: "#444444",
@@ -28,9 +29,9 @@ export default function RootLayout({
             }}
           >
             About
-          </a>
-          <a
-            href="/gallery/"
+          </Link>
+          <Link
+            href="/gallery"
             style={{
               color: "#444444",
               fontWeight: 500,
@@ -38,7 +39,7 @@ export default function RootLayout({
             }}
           >
             Gallery
-          </a>
+          </Link>
         </nav>
         {children}
         <footer
