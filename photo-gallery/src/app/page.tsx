@@ -25,13 +25,25 @@ export default async function GalleryPage() {
         style={{
           fontSize: "2rem",
           fontWeight: 600,
-          marginBottom: "2rem",
+          marginBottom: "1.2rem",
           color: "#222",
           textAlign: "center",
         }}
       >
         Photo Albums
       </h1>
+      <p
+        style={{
+          color: "#444",
+          fontSize: 18,
+          textAlign: "center",
+          margin: "0 0 2rem 0",
+          maxWidth: 700,
+        }}
+      >
+        Welcome to my Photo Gallery! Among these pages, you will find a
+        collection of my photos, organized into albums.
+      </p>
       <div
         style={{
           display: "flex",

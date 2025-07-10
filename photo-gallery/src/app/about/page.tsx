@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <main
@@ -11,7 +13,7 @@ export default function AboutPage() {
         justifyContent: "center",
       }}
     >
-      <h1
+      {/* <h1
         style={{
           fontSize: "2rem",
           fontWeight: 600,
@@ -21,29 +23,52 @@ export default function AboutPage() {
         }}
       >
         About
-      </h1>
+      </h1> */}
+
       <div
         style={{
-          maxWidth: 600,
+          width: "100vw", // or "100%"
+          height: 600,
           color: "#444",
           fontSize: 18,
           textAlign: "center",
+
+          backgroundImage: "url('/images/profile.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <p>
-          Welcome to my Photo Gallery! This is a simple gallery built with
-          Next.js and Sanity.
-        </p>
-        <p>
-          <a
-            href="https://instagram.com/zhenya.untilova"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#405de6", textDecoration: "none" }}
-          ></a>
-          .
-        </p>
+        <div
+          style={{
+            color: "#fff",
+            // padding: "rem",
+            marginBottom: "1rem",
+            width: "100%",
+          }}
+        >
+          <p>
+            Welcome to my Photo Gallery! Among these pages, you will find a
+            collection of my photos, organized into albums. This is a simple
+            gallery built with Next.js and Sanity.
+          </p>
+        </div>
       </div>
+      {/* <Image
+        src="/images/profile.jpg"
+        alt="Instagram profile photo"
+        width={1500}
+        height={1200}
+        style={{
+          margin: "16px 0",
+          opacity: 1,
+          objectFit: "cover",
+          textAlign: "center",
+        }}
+      /> */}
     </main>
   );
 }
