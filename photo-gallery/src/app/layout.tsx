@@ -46,8 +46,7 @@ export default function RootLayout({
           style={{
             width: "100%",
             textAlign: "center",
-            marginTop: 40,
-            padding: "1.5rem 0 1rem 0",
+            padding: "1rem 0",
             color: "#888",
             fontSize: 15,
             background: "#f8fafc",

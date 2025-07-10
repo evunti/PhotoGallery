@@ -15,6 +15,7 @@ export default function AboutPage() {
         style={{
           width: "100vw",
           height: 600,
+
           color: "#444",
           fontSize: 18,
           textAlign: "center",
@@ -31,10 +32,10 @@ export default function AboutPage() {
           style={{
             color: "#555555",
             padding: "1rem 1.5rem",
-            marginBottom: "17rem",
+            marginBottom: "18rem",
             width: "100%",
             maxWidth: 600,
-            margin: "0 auto",
+            margin: "1rem auto",
           }}
         >
           <p>
