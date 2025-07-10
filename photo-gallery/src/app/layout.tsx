@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "@/app/globals.css";
 
 export default function RootLayout({
@@ -8,6 +9,38 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <nav
+          style={{
+            width: "100%",
+            maxWidth: 1200,
+            margin: "0 auto 32px auto",
+            display: "flex",
+            justifyContent: "flex-end",
+            gap: 24,
+            padding: "1.5rem 2rem 0 2rem",
+          }}
+        >
+          <Link
+            href="/"
+            style={{
+              color: "#444444",
+              fontWeight: 500,
+              textDecoration: "none",
+            }}
+          >
+            About
+          </Link>
+          <Link
+            href="/gallery"
+            style={{
+              color: "#444444",
+              fontWeight: 500,
+              textDecoration: "none",
+            }}
+          >
+            Gallery
+          </Link>
+        </nav>
         {children}
         <footer
           style={{
