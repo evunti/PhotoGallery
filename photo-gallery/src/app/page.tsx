@@ -4,11 +4,10 @@ export default function AboutPage() {
       style={{
         background: "#f8fafc",
         minHeight: "100vh",
-        padding: "2rem",
+        padding: 0,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
       }}
     >
       <div
@@ -25,16 +24,17 @@ export default function AboutPage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          marginTop: 0,
         }}
       >
         <div
           style={{
-            color: "#555555",
-            padding: "1rem 1.5rem",
-            marginBottom: "17rem",
+            borderRadius: "1rem",
+            padding: "2rem 1.5rem",
             width: "100%",
             maxWidth: 600,
             margin: "0 auto",
+            marginBottom: "17rem",
           }}
         >
           <p>
