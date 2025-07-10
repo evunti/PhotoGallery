@@ -20,7 +20,7 @@ export default function RootLayout({
             background: "#f8fafc",
           }}
         >
-          &copy; {new Date().getFullYear()} Photo Gallery |
+          &copy; {new Date().getFullYear()} Evunti Photography |
           <a
             href="https://instagram.com/zhenya.untilova"
             target="_blank"
