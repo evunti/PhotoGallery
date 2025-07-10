@@ -1,15 +1,4 @@
-// Update the path below if your client file is in a different location
-import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/lib/image";
-import Image from "next/image";
-import { PhotoGrid } from "@/components/PhotoGrid";
-import Link from "next/link";
-
-const albumsQuery = `*[_type == "photoAlbum"]{_id, title, description, photos}`;
-
-export default async function GalleryPage() {
-  const albums = await client.fetch(albumsQuery);
-
+export default function AboutPage() {
   return (
     <main
       style={{
@@ -19,92 +8,66 @@ export default async function GalleryPage() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      <h1
+      {/* <h1
         style={{
           fontSize: "2rem",
           fontWeight: 600,
-          marginBottom: "1.2rem",
+          marginBottom: "1.5rem",
           color: "#222",
           textAlign: "center",
         }}
       >
-        Photo Albums
-      </h1>
-      <p
+        About
+      </h1> */}
+
+      <div
         style={{
+          width: "100vw", // or "100%"
+          height: 600,
           color: "#444",
           fontSize: 18,
           textAlign: "center",
-          margin: "0 0 2rem 0",
-          maxWidth: 700,
-        }}
-      >
-        Welcome to my Photo Gallery! Among these pages, you will find a
-        collection of my photos, organized into albums.
-      </p>
-      <div
-        style={{
+
+          backgroundImage: "url('/images/profile.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           display: "flex",
-          flexWrap: "wrap",
-          gap: "2rem",
+          alignItems: "center",
           justifyContent: "center",
-          width: "100%",
-          maxWidth: 1200,
         }}
       >
-        {albums.map((album: any) => {
-          const coverPhoto = album.photos?.[0];
-          return (
-            <Link
-              key={album._id}
-              href={`/album/${album._id}`}
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-                minWidth: 260,
-                maxWidth: 320,
-                aspectRatio: "1 / 1.1",
-                flex: "1 1 260px",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                transition: "box-shadow 0.2s",
-                cursor: "pointer",
-              }}
-            >
-              {coverPhoto && (
-                <Image
-                  src={urlFor(coverPhoto)
-                    .width(800)
-                    .height(800)
-                    .fit("crop")
-                    .dpr(2)
-                    .url()}
-                  alt={coverPhoto.alt || album.title}
-                  width={800}
-                  height={400}
-                />
-              )}
-              <h2
-                style={{
-                  fontSize: "1.15rem",
-                  fontWeight: 500,
-                  margin: 0,
-                  color: "#333",
-                  textAlign: "center",
-                  marginTop: 8,
-                }}
-              >
-                {album.title}
-              </h2>
-            </Link>
-          );
-        })}
+        <div
+          style={{
+            color: "#555555",
+            padding: "25rem",
+            marginBottom: "20rem",
+            width: "100%",
+          }}
+        >
+          {/* This is a simple
+            gallery built with Next.js and Sanity. */}
+          <p>
+            Welcome to my Photo Gallery! Among these pages, you will find a
+            collection of photos, organized into albums.
+          </p>
+        </div>
       </div>
+      {/* <Image
+        src="/images/profile.jpg"
+        alt="Instagram profile photo"
+        width={1500}
+        height={1200}
+        style={{
+          margin: "16px 0",
+          opacity: 1,
+          objectFit: "cover",
+          textAlign: "center",
+        }}
+      /> */}
     </main>
   );
 }
-
-// Removed SanityImage, now handled in album/[albumId]/page.tsx

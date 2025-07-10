@@ -22,22 +22,22 @@ export default function RootLayout({
           <a
             href="/"
             style={{
-              color: "#405de6",
-              fontWeight: 500,
-              textDecoration: "none",
-            }}
-          >
-            Gallery
-          </a>
-          <a
-            href="/about/"
-            style={{
-              color: "#405de6",
+              color: "#444444",
               fontWeight: 500,
               textDecoration: "none",
             }}
           >
             About
+          </a>
+          <a
+            href="/gallery/"
+            style={{
+              color: "#444444",
+              fontWeight: 500,
+              textDecoration: "none",
+            }}
+          >
+            Gallery
           </a>
         </nav>
         {children}
