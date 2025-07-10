@@ -5,7 +5,6 @@ import Image from "next/image";
 import { PhotoGrid } from "@/components/PhotoGrid";
 import Link from "next/link";
 
-// GROQ query to get all albums and their photos
 const albumsQuery = `*[_type == "photoAlbum"]{_id, title, description, photos}`;
 
 export default async function GalleryPage() {
@@ -52,7 +51,6 @@ export default async function GalleryPage() {
               style={{
                 textDecoration: "none",
                 color: "inherit",
-
                 minWidth: 260,
                 maxWidth: 320,
                 aspectRatio: "1 / 1.1",

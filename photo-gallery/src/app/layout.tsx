@@ -8,6 +8,38 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <nav
+          style={{
+            width: "100%",
+            maxWidth: 1200,
+            margin: "0 auto 32px auto",
+            display: "flex",
+            justifyContent: "flex-end",
+            gap: 24,
+            padding: "1.5rem 2rem 0 2rem",
+          }}
+        >
+          <a
+            href="/"
+            style={{
+              color: "#405de6",
+              fontWeight: 500,
+              textDecoration: "none",
+            }}
+          >
+            Gallery
+          </a>
+          <a
+            href="/about/"
+            style={{
+              color: "#405de6",
+              fontWeight: 500,
+              textDecoration: "none",
+            }}
+          >
+            About
+          </a>
+        </nav>
         {children}
         <footer
           style={{
