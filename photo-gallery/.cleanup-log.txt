@@ -1,0 +1,8 @@
+Deleted files and folders:
+1. src/app/studio/
+2. src/sanity/env.ts
+3. src/sanity/structure.ts
+4. src/app/blog/[[...tool]]/
+5. .DS_Store
+6. .next (build folder)
+7. node_modules (dependencies folder)

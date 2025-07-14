@@ -1,0 +1,7 @@
+src/app/studio/
+src/sanity/env.ts
+src/sanity/structure.ts
+src/app/blog/[[...tool]]/
+.DS_Store
+.next
+node_modules
