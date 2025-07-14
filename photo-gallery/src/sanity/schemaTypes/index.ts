@@ -1,4 +1,4 @@
-import { type SchemaTypeDefinition } from "sanity";
+import { defineType } from "sanity";
 
 const photoAlbumSchema = {
   name: "photoAlbum",
@@ -24,6 +24,6 @@ const photoAlbumSchema = {
   ],
 };
 
-export const schema: { types: SchemaTypeDefinition[] } = {
+export const schema = {
   types: [photoAlbumSchema],
 };
